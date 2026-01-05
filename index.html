@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="N3DxCcjbvKkZjgNPWFzQ8XsKadWy4_JY3n221Uf5jPg" />
+    <title>Typing Speed Test</title>
+    <meta name="description"
+        content="Test your typing speed with our premium live typing test tool. Check your WPM and accuracy instantly.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236466f1'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9v-2h6v2zm-3-7l-2.5-2.5L11 7l3.5 3.5L11 14l-1.5-1.5 2.5-2.5z'/%3E%3C/svg%3E">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header class="header">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="logo-icon">
+                    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                    <line x1="9" y1="20" x2="15" y2="20"></line>
+                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                </svg>
+                <span>TypeFast</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Typing Test</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="timer">60</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">WPM</span>
+                    <span class="stat-value" id="wpm">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Accuracy</span>
+                    <span class="stat-value" id="accuracy">100%</span>
+                </div>
+            </div>
+
+            <div class="typing-container">
+                <div class="typing-area" id="typing-area">
+                    <!-- Words will be injected here -->
+                    <div class="caret" id="caret"></div>
+                </div>
+                <input type="text" id="hidden-input" class="hidden-input" autocomplete="off" autocapitalize="off"
+                    spellcheck="false">
+
+                <div class="overlay" id="results-overlay">
+                    <div class="results-card">
+                        <h2>Test Complete!</h2>
+                        <div class="result-grid">
+                            <div class="result-box">
+                                <span class="result-number" id="final-wpm">0</span>
+                                <span class="result-label">WPM</span>
+                            </div>
+                            <div class="result-box">
+                                <span class="result-number" id="final-accuracy">0%</span>
+                                <span class="result-label">Accuracy</span>
+                            </div>
+                            <div class="result-box">
+                                <span class="result-number" id="final-cpm">0</span>
+                                <span class="result-label">CPM</span>
+                            </div>
+                        </div>
+                        <button class="restart-btn" id="restart-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M2.5 2v6h6M21.5 22v-6h-6" />
+                                <path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2" />
+                            </svg>
+                            Try Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <p>Start typing to begin the test. Press <span>Tab</span> to restart.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 TypeFast. Built for speed.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
